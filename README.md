@@ -1,9 +1,9 @@
 # 🌸 Fresh Beginnings Publishing
 
-**Built using [astro](https://astro.build/)**
+[![Built with Astro](https://astro.badg.es/v1/built-with-astro.svg)](https://astro.build)
 
-The homepage for Fresh Beginning's Publishing LLC.
+Deployed on [Vercel](https://vercel.com/)
 
-Deployed on [Vercel](https://vercel.com/) https://img.shields.io/github/deployments/giantrotta24/fresh-beginnings-publishing/production?label=vercel&logo=vercel&logoColor=white
+![vercel build status](https://img.shields.io/github/deployments/giantrotta24/fresh-beginnings-publishing/production?label=vercel&logo=vercel&logoColor=white)
 
-[freshbeginningspublishing.com](https://freshbeginningspublishing.com)
+**The homepage for Fresh Beginning's Publishing LLC.**
