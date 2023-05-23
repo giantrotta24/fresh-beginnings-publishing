@@ -1,22 +1,27 @@
 ---
 export interface Props {
-  title: string;
+  title?: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr" class="2xl:text-[20px]">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta
+      name="description"
+      content="The website for Fresh Beginnings Publishing LLC, a small independent publishing company based out of Cleveland, Ohio."
+    />
     <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="mask-icon" type="image/svg+xml" href="/favicon.svg" color="#8D46E7" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="antialiased tracking-tight">
     <slot />
   </body>
 </html>
@@ -32,5 +37,9 @@ const { title } = Astro.props;
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
       monospace;
+  }
+
+  img {
+    content-visibility: auto;
   }
 </style>
