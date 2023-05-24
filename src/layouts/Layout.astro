@@ -1,28 +1,39 @@
 ---
+import '~/assets/styles/base.css';
+
+import Header from '~/components/Header.astro';
+
+import { headerData } from '~/data';
+import { CONFIG } from '~/config';
+
 export interface Props {
   title?: string;
 }
 
 const { title } = Astro.props;
+const { defaultTitle, description, language = 'en', textDirection = 'ltr' } = CONFIG;
 ---
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="2xl:text-[20px]">
+<html lang={language} dir={textDirection} class="2xl:text-[20px]">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="The website for Fresh Beginnings Publishing LLC, a small independent publishing company based out of Cleveland, Ohio."
-    />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="mask-icon" type="image/svg+xml" href="/favicon.svg" color="#8D46E7" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{title || defaultTitle}</title>
   </head>
-  <body class="antialiased tracking-tight">
-    <slot />
+  <body class="antialiased text-page bg-light tracking-tight">
+    <slot name="header">
+      <Header {...headerData} isSticky />
+    </slot>
+    <main>
+      <slot />
+    </main>
+    <slot name="footer" />
   </body>
 </html>
 <style is:global>
