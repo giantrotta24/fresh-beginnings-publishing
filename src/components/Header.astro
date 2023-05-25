@@ -26,7 +26,7 @@ const { links = [], isSticky = false, position = 'center' } = Astro.props;
   id="header"
   class:list={[
     { sticky: isSticky, relative: !isSticky },
-    'top-0 z-40 flex-none mx-auto w-full transition-all ease-in duration-100',
+    'top-0 z-40 flex-none mx-auto w-full transition-all ease-in duration-100 text-green-800 font-bold',
   ]}
 >
   <div class="py-3 px-3 md:py-3.5 md:px-4 mx-auto w-full md:flex md:justify-between max-w-7xl">
@@ -48,14 +48,14 @@ const { links = [], isSticky = false, position = 'center' } = Astro.props;
             <li class={links?.length ? 'dropdown' : ''}>
               {links?.length ? (
                 <>
-                  <button class="font-medium hover:text-gray-500 px-4 py-3 flex items-center transition duration-150 ease-in-out">
+                  <button class="hover:text-green-400 border rounded-md border-transparent hover:border-green-800 px-4 py-3 flex items-center transition duration-150 ease-in-out">
                     {text} <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 hidden md:inline" />
                   </button>
-                  <ul class="dropdown-menu md:backdrop-blur-md rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
+                  <ul class="dropdown-menu md:backdrop-blur-md rounded md:absolute pl-4 md:pl-0 md:hidden md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
                     {links.map(({ text: text2, href: href2 }) => (
                       <li>
                         <a
-                          class="first:rounded-t last:rounded-b md:hover:bg-gray-200 py-2 px-5 block whitespace-no-wrap"
+                          class="first:rounded-t last:rounded-b hover:text-green-400 md:hover:bg-gray-200 py-2 px-5 block whitespace-no-wrap"
                           href={href2}
                         >
                           {text2}
@@ -66,7 +66,7 @@ const { links = [], isSticky = false, position = 'center' } = Astro.props;
                 </>
               ) : (
                 <a
-                  class="font-medium hover:text-gray-500 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                  class="hover:text-green-400 border rounded-md border-transparent hover:border-green-800 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                   href={href}
                 >
                   {text}
