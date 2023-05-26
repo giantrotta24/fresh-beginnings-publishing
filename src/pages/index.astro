@@ -3,57 +3,21 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="Fresh Beginnings Publishing LLC">
-  <main>
-    <h1 class="text-2xl">
-      Welcome to <span class="text-gradient">Fresh Beginnings Publishing</span>
-    </h1>
-    <p>Coming Soon 🚧</p>
-  </main>
+<Layout>
+  <section class="relative md:-mt-[76px]">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
+      <div class="py-12 md:py-20">
+        <div class="text-center pb-10 md:pb-16 max-w-screen-lg mx-auto">
+          <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
+            Welcome to <span class="text-green-800">Fresh Beginnings</span> Publishing
+          </h1>
+          <div class="max-w-3xl mx-auto">
+            <p class="text-xl text-muted mb-6">Coming Soon!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 60ch;
-  }
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.4rem;
-    font-weight: bold;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
-  }
-</style>

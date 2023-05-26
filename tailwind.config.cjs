@@ -1,8 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: 'var(--aw-color-primary)',
+        secondary: 'var(--aw-color-secondary)',
+        accent: 'var(--aw-color-accent)',
+      },
+    },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
