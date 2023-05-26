@@ -28,9 +28,9 @@ const { defaultTitle, description, language = 'en', textDirection = 'ltr' } = CO
     <title>{title || defaultTitle}</title>
   </head>
   <body class="antialiased text-page bg-light tracking-tight">
-    <!-- <slot name="header">
+    <slot name="header">
       <Header {...headerData} isSticky />
-    </slot> -->
+    </slot>
     <main>
       <slot />
     </main>
