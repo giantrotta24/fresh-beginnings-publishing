@@ -22,6 +22,12 @@
       document.querySelector('#header nav')?.classList.toggle('hidden');
     });
 
+    function getFullYear() {
+      return new Date().getFullYear();
+    }
+
+    document.getElementById('copyright').innerHTML = getFullYear();
+
     function appyHeaderStylesOnScroll() {
       const header = document.getElementById('header');
       if (lastKnownScrollPosition > 60 && !header.classList.contains('scroll')) {

@@ -2,24 +2,57 @@ export const headerData = {
   links: [
     {
       text: 'About us',
-      href: '#'
+      href: '/about',
     },
     {
       text: 'Our work',
       links: [
         {
           text: 'Rusty the Raccoon',
-          href: '#'
-        }
-      ]
+          href: '/rusty',
+        },
+      ],
     },
     {
       text: 'Blog',
-      href: '#'
+      href: '/blog',
     },
     {
       text: 'Contact',
-      href: '#'
-    }
-  ]
-}
+      href: '/contact',
+    },
+  ],
+};
+
+export const footerData = {
+  links: [
+    {
+      title: 'Product',
+      links: [{ text: 'Rusty the Racoon', href: '/rusty' }],
+    },
+    {
+      title: 'Company',
+      links: [
+        { text: 'About', href: '/about' },
+        { text: 'Blog', href: '/blog' },
+        { text: 'Careers', href: '/careers' },
+        { text: 'Press', href: '/press' },
+        { text: 'Shop', href: '/shop' },
+      ],
+    },
+  ],
+  // secondaryLinks: [
+  //   { text: 'Terms', href: '#' },
+  //   { text: 'Privacy Policy', href: '#' },
+  // ],
+  socialLinks: [
+    // { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
+    {
+      ariaLabel: 'Instagram',
+      icon: 'mdi:instagram',
+      href: 'https://instagram.com/freshbeginningscommunity?igshid=MzRlODBiNWFlZA==',
+    },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/groups/360330059436123' },
+    { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/@freshbeginningspublishing' },
+  ],
+};

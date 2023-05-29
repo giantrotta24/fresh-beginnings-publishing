@@ -3,9 +3,10 @@ import '~/assets/styles/base.css';
 
 import Header from '~/components/Header.astro';
 
-import { headerData } from '~/data';
+import { headerData, footerData } from '~/data';
 import { CONFIG } from '~/config';
 import Scripts from '~/components/Scripts.astro';
+import Footer from '~/components/Footer.astro';
 
 export interface Props {
   title?: string;
@@ -28,13 +29,15 @@ const { defaultTitle, description, language = 'en', textDirection = 'ltr' } = CO
     <title>{title || defaultTitle}</title>
   </head>
   <body class="antialiased text-page bg-light tracking-tight">
-    <!-- <slot name="header">
+    <slot name="header">
       <Header {...headerData} isSticky />
-    </slot> -->
+    </slot>
     <main>
       <slot />
     </main>
-    <slot name="footer" />
+    <slot name="footer">
+      <Footer {...footerData} />
+    </slot>
     <Scripts />
   </body>
 </html>
