@@ -10,7 +10,7 @@ export default defineConfig({
   site: CONFIG.origin,
   base: CONFIG.basePathname,
   trailingSlash: CONFIG.trailingSlash ? 'always' : 'never',
-  output: 'static',
+  output: 'server',
   build: {
     inlineStylesheets: 'never',
   },
