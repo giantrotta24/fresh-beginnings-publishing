@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import { CONFIG } from './src/config.ts';
+import vercel from '@astrojs/vercel/serverless';
 
 import Compress from 'astro-compress';
 
@@ -13,6 +14,11 @@ export default defineConfig({
   build: {
     inlineStylesheets: 'never',
   },
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
   integrations: [
     tailwind({
       config: {
