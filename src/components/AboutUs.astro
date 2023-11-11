@@ -1,5 +1,5 @@
 ---
-import { Picture } from '@astrojs/image/components';
+import { Image } from 'astro:assets';
 
 export interface Props {
   image?: string | any;
@@ -43,7 +43,7 @@ const { image = await Astro.slots.render('image') } = Astro.props;
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
               ) : (
-                <Picture
+                <Image
                   class="mx-auto w-full"
                   width={500}
                   height={500}
