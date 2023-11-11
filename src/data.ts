@@ -9,7 +9,7 @@ export const headerData = {
       links: [
         {
           text: 'Rusty the Raccoon',
-          href: '/rusty',
+          href: 'https://www.rustytheraccoon.com/',
         },
       ],
     },
@@ -28,7 +28,12 @@ export const footerData = {
   links: [
     {
       title: 'Product',
-      links: [{ text: 'Rusty the Racoon', href: '/rusty' }],
+      links: [
+        {
+          text: 'Rusty the Racoon',
+          href: 'https://www.amazon.com/Rusty-Raccoon-Scared-Michelle-Trotta/dp/B0CJ44D6NK?crid=69SBI4UNFJJC&keywords=rusty+the+raccoon+is+scared+of+the+dark&qid=1699735695&sprefix=rusty+the+raccoo,aps,70&sr=8-1',
+        },
+      ],
     },
     {
       title: 'Company',

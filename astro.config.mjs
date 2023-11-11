@@ -1,9 +1,8 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
-import compress from 'astro-compress';
 import { CONFIG } from './src/config.ts';
 
-import image from "@astrojs/image";
+import Compress from 'astro-compress';
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,18 +10,23 @@ export default defineConfig({
   base: CONFIG.basePathname,
   trailingSlash: CONFIG.trailingSlash ? 'always' : 'never',
   output: 'static',
-  integrations: [tailwind({
-    config: {
-      applyBaseStyles: false
-    }
-  }), compress({
-    css: true,
-    html: {
-      removeAttributeQuotes: false
-    },
-    img: false,
-    js: true,
-    svg: false,
-    logger: 1
-  }), image()]
+  build: {
+    inlineStylesheets: 'never',
+  },
+  integrations: [
+    tailwind({
+      config: {
+        applyBaseStyles: false,
+      },
+    }),
+    Compress({
+      css: true,
+      html: {
+        removeAttributeQuotes: false,
+      },
+      js: true,
+      svg: false,
+      logger: 1,
+    }),
+  ],
 });
