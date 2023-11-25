@@ -1,0 +1,20 @@
+---
+import { useSanityClient } from 'astro-sanity';
+
+export const prerender = true;
+export async function getStaticPaths() {
+  const posts = await useSanityClient().fetch(`*[_type == "post"]`);
+
+  return posts.map(({ slug, title }: { slug: { current: string }; title: string }) => {
+    return {
+      params: { slug: slug.current },
+      props: { title },
+    };
+  });
+}
+
+const { slug } = Astro.params;
+const { title } = Astro.props;
+---
+
+<h1>{title}</h1>
