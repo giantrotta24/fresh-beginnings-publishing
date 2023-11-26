@@ -12,4 +12,11 @@ export const CONFIG = {
 
   language: 'en',
   textDirection: 'ltr',
-}
+
+  // sanity
+  sanity: {
+    projectId: '6g9k3q3x',
+    dataset: 'development', // make dynamic later
+    apiVersion: '2021-03-25',
+  },
+};

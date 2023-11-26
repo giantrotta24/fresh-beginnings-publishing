@@ -38,9 +38,9 @@ export default defineConfig({
       logger: 1,
     }),
     sanity({
-      projectId: 'j9ctl99u',
-      dataset: isProd ? 'production' : 'development',
-      apiVersion: '2021-03-25',
+      projectId: CONFIG.sanity.projectId,
+      dataset: CONFIG.sanity.dataset,
+      apiVersion: CONFIG.sanity.apiVersion,
       useCdn: true,
     }),
   ],
