@@ -15,7 +15,7 @@ export const CONFIG = {
 
   // sanity
   sanity: {
-    projectId: '6g9k3q3x',
+    projectId: 'j9ctl99u',
     dataset: 'development', // make dynamic later
     apiVersion: '2021-03-25',
   },
