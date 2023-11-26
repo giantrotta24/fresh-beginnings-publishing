@@ -17,6 +17,9 @@ dependencies:
   astro-icon:
     specifier: 0.8.0
     version: 0.8.0
+  astro-portabletext:
+    specifier: ^0.9.6
+    version: 0.9.6
   astro-sanity:
     specifier: ^1.1.7
     version: 1.1.7(sharp@0.32.6)
@@ -1217,6 +1220,13 @@ packages:
       '@portabletext/types': 2.0.8
     dev: false
 
+  /@portabletext/toolkit@2.0.10:
+    resolution: {integrity: sha512-d+F9JvpnMEx7kd6saZ9OWA4U1Iwuokh6TOht7iqkfWU+0ivh9yM4v+b0Kpu+iiPcElicoabhtXol+yTvWJ1jDw==}
+    engines: {node: ^14.13.1 || >=16.0.0}
+    dependencies:
+      '@portabletext/types': 2.0.8
+    dev: false
+
   /@portabletext/types@1.0.3:
     resolution: {integrity: sha512-SDDsdury2SaTI2D5Ea6o+Y39SSZMYHRMWJHxkxYl3yzFP0n/0EknOhoXcoaV+bxGr2dTTqZi2TOEj+uWYuavSw==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -1816,6 +1826,13 @@ packages:
       node-fetch: 3.3.2
       resolve-pkg: 2.0.0
       svgo: 2.8.0
+    dev: false
+
+  /astro-portabletext@0.9.6:
+    resolution: {integrity: sha512-v8YKRgjCpaxr94NefXRsH5ti9YoXqCrYah46epdJ4AdwtvIiLZA8vONFQjk5Y2cJ2UEEeGd+/8lo+tWmlo3aPw==}
+    dependencies:
+      '@portabletext/toolkit': 2.0.10
+      '@portabletext/types': 2.0.8
     dev: false
 
   /astro-sanity@1.1.7(sharp@0.32.6):

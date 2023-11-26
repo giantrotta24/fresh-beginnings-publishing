@@ -1,9 +1,23 @@
 ---
+import { useSanityClient } from 'astro-sanity';
+
 import Layout from '~/layouts/Layout.astro';
 
 import ComingSoon from '~/components/ComingSoon.astro';
+
+const posts = await useSanityClient().fetch(`*[_type == "post"]`);
 ---
 
 <Layout>
-  <ComingSoon title="Blog" />
+  {
+    posts && (
+      <ul>
+        {posts.map((post: { title: string; slug: { current: string } }) => (
+          <li>
+            <a href={`blog/post/${post.slug?.current}`}>{post.title}</a>
+          </li>
+        ))}
+      </ul>
+    )
+  }
 </Layout>
